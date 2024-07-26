@@ -47,7 +47,7 @@ const loop = setInterval(() => {
 
             mario.style.animation = 'none';
             mario.style.bottom = `${marioPosition}px`;
-            mario.src = 'images/loser.gif';
+            mario.src = '../images/loser.gif';
             mario.style.width = '65px';
             mario.style.marginLeft = '35px';
 
@@ -64,7 +64,7 @@ const loop = setInterval(() => {
 
             mario.style.animation = 'none';
             mario.style.bottom = `${marioPosition}px`;
-            mario.src = 'images/loser.gif';
+            mario.src = '../images/loser.gif';
             mario.style.width = '50px';
             mario.style.marginLeft = '35px';
 
@@ -81,7 +81,7 @@ const loop = setInterval(() => {
 
             mario.style.animation = 'none';
             mario.style.bottom = `${marioPosition}px`;
-            mario.src = 'images/loser.gif';
+            mario.src = '../images/loser.gif';
             mario.style.width = '50px';
             mario.style.marginLeft = '35px';
 
@@ -95,9 +95,9 @@ const loop = setInterval(() => {
 }, 10);
 
 function gameOver() {
-    overDiv.innerHTML += `<img src="images/overpic.png" alt="imagem game over" class="game-over">
+    overDiv.innerHTML += `<img src="../images/overpic.png" alt="imagem game over" class="game-over">
     <button class="buttonStart" onclick="start()">
-        <img src="images/Daco_4422541.png" alt="imagem começar jogo" width="150px" class="start">
+        <img src="../images/Daco_4422541.png" alt="imagem começar jogo" width="150px" class="start">
     </button>`;
     backgroundMusic.pause(); // Pausa a música quando o jogo acaba
 }
@@ -143,3 +143,4 @@ window.addEventListener("load", () => {
     increaseDifficulty();
     backgroundMusic.play(); // Inicia a reprodução da música
 });
+

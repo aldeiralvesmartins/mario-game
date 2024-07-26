@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Cadastro - Super Mario</title>
+</head>
+<body>
+<img src="../images/clouds.png" alt="imagem nuvens" class="clouds">
+<main>
+    <section class="contato">
+        <div class="contato-container">
+            <button class="dropbtn">Jogar</button>
+            <div class="dropdown-content">
+                <a href="../pages/jogo.html">Jogar</a>
+                <a href="../pages/logar.html">Logar</a>
+                <a href="../pages/cadastrar.html">Cadastrar</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="title-container">
+        <h1>Mario Game</h1>
+        <p>Evite os obstaculos e ajude Mario a salvar a princesa Peach. Divirta-se!</p>
+        <p>Pressione <i>Start</i> para Jogar</p>
+    </div>
+
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <audio id="background-music" src="../musica/Super-Mario-Bros.mp3" loop></audio>
+
+    <img src="../images/pipe.png" alt="imagem tubo verde" class="pipe">
+</main>
+<script src="../js/index.js"></script>
+<script>
+    const backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic) {
+
+        backgroundMusic.volume = 0.2;
+        backgroundMusic.play().catch(error => {
+            console.error('Erro ao tentar tocar a música:', error);
+        });
+    }
+</script>
+</body>
+</html>

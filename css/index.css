@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Mono', monospace;
     color: #fff;
 }
-body{
+body {
     width: 100vw;
     overflow: hidden;
 }
-.contato{
+.contato {
     display: flex;
     width: 100%;
     justify-content: end;
@@ -16,15 +16,15 @@ body{
     position: absolute;
     top: 20px;
 }
-.contato a{
+.contato a {
     width: auto;
     height: 30px;
 }
-.contato-container{
+.contato-container {
     position: relative;
     display: inline-block;
 }
-.dropbtn{
+.dropbtn {
     background-color: #003f72;
     border: none;
     width: 100px;
@@ -51,17 +51,14 @@ body{
     background-color: #007bc2;
     width: 100%;
 }
-
 .contato-container:hover .dropdown-content {
     display: flex;
     flex-wrap: wrap;
 }
-
 .contato-container:hover .dropbtn {
     background-color: #002f55;
 }
-
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,37 +68,35 @@ main{
     background: linear-gradient(#0084d1, #c9ecff);
     overflow: hidden;
 }
-h1, p, a, h2{
+h1, p, a, h2 {
     width: 100%;
     text-align: center;
 }
-h1{
+h1 {
     font-size: 80px;
 }
-.start-container img, a{
+.start-container img, a {
     height: 70px;
     width: 220px;
 }
-.title-container{
+.title-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 5%;
 }
-.start-container:hover img, a{
+.start-container:hover img, a {
     height: 80px;
     width: 240px;
 }
-
-.pipe{
+.pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
     height: 80px;
     animation: pipeAnimation 3s infinite linear;
-
 }
-.clouds{
+.clouds {
     position: absolute;
     width: 750px;
     height: 300px;
@@ -109,35 +104,108 @@ h1{
     animation: cloudsAnimation 4s infinite linear;
     z-index: 0;
 }
-@keyframes pipeAnimation{
-    from{
+@keyframes pipeAnimation {
+    from {
         right: -80px;
     }
-    to{
+    to {
         right: 100%;
     }
 }
-@keyframes cloudsAnimation{
-    from{
+@keyframes cloudsAnimation {
+    from {
         right: -600px;
     }
-    to{
+    to {
         right: 100%;
     }
 }
-@media screen and (max-width: 1000px){
-    .pipe{
+@media screen and (max-width: 1000px) {
+    .pipe {
         display: none;
     }
-    .clouds{
+    .clouds {
         display: none;
     }
 }
-@media screen and (max-width: 500px){
-    h1{
+@media screen and (max-width: 500px) {
+    h1 {
         font-size: 60px;
     }
-    main{
+    main {
         padding: 2%;
+    }
+}
+
+/* Estilo para o formulário */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+    z-index: 10000;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffcc00;
+    text-shadow: 2px 2px #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    color: #000;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px #cc0000;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #cc0000;
+}
+
+button[type="submit"]:active {
+    box-shadow: 0 2px #cc0000;
+    transform: translateY(3px);
+}
+/* Ocultar title-container em telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .title-container {
+        display: none;
     }
 }
