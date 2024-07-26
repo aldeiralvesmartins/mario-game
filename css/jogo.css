@@ -50,7 +50,16 @@ header {
     bottom: 0;
     width: 80px;
     height: 80px;
-    animation: pipeAnimation 2s infinite linear;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
 }
 .mario{
     position: absolute;
@@ -100,6 +109,16 @@ header {
     width: 162px;
     height: 50px;
 }
+
+.score-board {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+}
+
 
 @keyframes pipeAnimation{
     from{
